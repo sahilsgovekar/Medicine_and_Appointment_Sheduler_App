@@ -45,6 +45,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Home" />
+
         <receiver
             android:name=".broadcastForReminder"
             android:exported="true" />
