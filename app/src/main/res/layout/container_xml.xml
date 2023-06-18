@@ -1,0 +1,18 @@
+<!-- container_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/round_bk2">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:fontFamily="@font/baloo"
+        android:padding="25dp"
+        android:text="  Shedule Medecine"
+        android:textSize="30sp" />
+
+    <!-- Add more views or components here as per your requirements -->
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/drawable-v24/background_btn_1.xml" value="0.2265" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/drawable-v24/background_btn_2.xml" value="0.2265" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/drawable/edittextbackground.xml" value="0.2265" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/drawable/ic_baseline_alarm_24.xml" value="0.2465" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/font/font.xml" value="0.2859375" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/activity_home.xml" value="0.2476303317535545" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/activity_login.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/activity_shedule_appointment.xml" value="0.4" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/activity_shedule_medecine.xml" value="0.2476303317535545" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/activity_sign_up.xml" value="0.25677083333333334" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/activity_view_sheduled_medicine.xml" value="0.24588235294117647" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/container_xml.xml" value="0.264" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/layout/toolbar.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/sahilsgovekar/Desktop/Android mini project/app/src/main/res/menu/popup_menu.xml" value="0.25677083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
