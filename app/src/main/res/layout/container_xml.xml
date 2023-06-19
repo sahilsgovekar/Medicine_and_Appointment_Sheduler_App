@@ -7,10 +7,10 @@
     <TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
-        android:layout_height="81dp"
+        android:layout_height="match_parent"
         android:fontFamily="@font/baloo"
         android:padding="25dp"
-        android:text="  Shedule Medecine"
+        android:text="Medecine name \nqty : 12             time\ndays remaning : "
         android:textSize="30sp" />
 
     <!-- Add more views or components here as per your requirements -->

@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Home extends AppCompatActivity {
 
     TextView headname;
-    CardView shedMedBtn, bookapbtn, viewshedmed;
+    CardView shedMedBtn, bookapbtn, viewshedmed, viewshedapp;
 
 
     @Override
@@ -29,6 +29,7 @@ public class Home extends AppCompatActivity {
         shedMedBtn = findViewById(R.id.shedMedBtn);
         bookapbtn = findViewById(R.id.bookapbtn);
         viewshedmed = findViewById(R.id.viewshedmed);
+        viewshedapp = findViewById(R.id.viewshedapp);
 
         headname.setText("@"+username);
 
@@ -59,6 +60,16 @@ public class Home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        viewshedapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ViewSheduledAppointment.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

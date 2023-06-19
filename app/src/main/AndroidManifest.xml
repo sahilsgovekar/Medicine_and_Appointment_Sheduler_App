@@ -18,6 +18,12 @@
         android:theme="@style/Theme.Health_App"
         tools:targetApi="31">
         <activity
+            android:name=".Splashscreen"
+            android:exported="false" />
+        <activity
+            android:name=".ViewSheduledAppointment"
+            android:exported="false" />
+        <activity
             android:name=".ViewSheduledMedicine"
             android:exported="false" />
         <activity
@@ -44,7 +50,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Home" />
 
         <receiver

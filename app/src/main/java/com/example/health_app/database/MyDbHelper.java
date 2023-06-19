@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 import com.example.health_app.SheduleAppointment;
 import com.example.health_app.SheduleMedecine;
+import com.example.health_app.model.Appointment;
 import com.example.health_app.model.Medecine;
 import com.example.health_app.params.params;
 
@@ -159,5 +160,34 @@ public class MyDbHelper extends SQLiteOpenHelper {
         }
         return sheduledmedecinelist;
     }
+
+    public List<Appointment> getappointmentlist(String username){
+        List<Appointment> sheduledmedecinelist = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+//        db.execSQL("create table appointmentshedules(username TEXT, pname TEXT, dhname TEXT, des TEXT, date TEXT)");
+
+        // Generate the query to read from the database
+        String select = "SELECT * FROM appointmentshedules" ;
+        Cursor cursor = db.rawQuery(select, null);
+
+        //Loop through now
+        if(cursor.moveToFirst()){
+            do{
+                if(username.endsWith(cursor.getString(0))) {
+                    Appointment sm = new Appointment();
+                    //String pname, String mname, String qty, String date, String nodays, String time
+                    sm.setPname(cursor.getString(1));
+                    sm.setDhname(cursor.getString(2));
+                    sm.setDesc(cursor.getString(3));
+                    sm.setDate(cursor.getString(4));
+                    sheduledmedecinelist.add(sm);
+                }
+
+            }while(cursor.moveToNext());
+        }
+        return sheduledmedecinelist;
+    }
+
 
 }

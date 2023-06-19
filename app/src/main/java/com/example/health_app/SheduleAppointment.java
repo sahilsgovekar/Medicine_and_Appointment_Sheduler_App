@@ -83,7 +83,7 @@ public class SheduleAppointment extends AppCompatActivity {
                     setAla4rm(cd, cm, cy, msg);
                     Toast.makeText(SheduleAppointment.this, "appointment sheduled", Toast.LENGTH_SHORT).show();
                     Log.d("t1", "afcll: ");
-                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
                     intent.putExtra("username", username);
                     startActivity(intent);
                 } else {
