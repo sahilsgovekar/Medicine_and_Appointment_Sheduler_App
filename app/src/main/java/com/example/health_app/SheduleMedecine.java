@@ -115,6 +115,7 @@ public class SheduleMedecine extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), Home.class);
                         intent.putExtra("username", username);
                         startActivity(intent);
+                        finish();
                 } else {
                     Toast.makeText(SheduleMedecine.this, "error in sheduling, retry", Toast.LENGTH_SHORT).show();
                 }

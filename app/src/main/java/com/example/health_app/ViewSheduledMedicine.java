@@ -58,7 +58,16 @@ import java.util.List;
 //            View container = getLayoutInflater().inflate(R.layout.container_xml,  null);
              View container = getLayoutInflater().inflate(R.layout.container_xml, parentContainer, false);
 
-            TextView textView = container.findViewById(R.id.text_view);
+             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                     LinearLayout.LayoutParams.MATCH_PARENT,
+                     LinearLayout.LayoutParams.WRAP_CONTENT
+             );
+             int margin = getResources().getDimensionPixelSize(R.dimen.container_margin);
+             layoutParams.setMargins(0, margin, 0, 0); // Set margin for the container
+             container.setLayoutParams(layoutParams);
+
+
+             TextView textView = container.findViewById(R.id.text_view);
             String content = med.getMname()+" \nqty : "+med.getQty()+"         "+med.getTime()+"\ndays remaning : "+med.getNodays();
             textView.setText(content);
 

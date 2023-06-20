@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="@drawable/round_bk2">
+    android:background="@drawable/shedule_list">
 
     <TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/baloo"
-        android:textColor="#392F20"
+        android:textColor="#E1A500"
         android:padding="25dp"
         android:text="Medecine name \nqty : 12             time\ndays remaning : "
         android:textSize="30sp" />

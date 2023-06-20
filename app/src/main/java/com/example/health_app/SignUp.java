@@ -52,6 +52,7 @@ public class SignUp extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(), SignupPerMedDet.class);
                                 intent.putExtra("username", user);
                                 startActivity(intent);
+                                finish();
                             } else {
                                 Toast.makeText(SignUp.this, "Regrestration failes, try again", Toast.LENGTH_SHORT).show();
                             }
