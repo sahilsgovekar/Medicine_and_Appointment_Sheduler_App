@@ -55,7 +55,7 @@ public class SignupPerMedDet extends AppCompatActivity {
                 if(instatus) {
                     Toast.makeText(SignupPerMedDet.this, "record saved", Toast.LENGTH_SHORT).show();
                     Log.d("t1", "afcll: ");
-                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
                     intent.putExtra("username", username);
                     startActivity(intent);
                     finish();
