@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/baloo"
+        android:textColor="#392F20"
         android:padding="25dp"
         android:text="Medecine name \nqty : 12             time\ndays remaning : "
         android:textSize="30sp" />

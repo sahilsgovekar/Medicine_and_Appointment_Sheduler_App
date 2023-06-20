@@ -49,7 +49,7 @@ public class SignUp extends AppCompatActivity {
                             Boolean insert = db.insertData(user, pass);
                             if(insert==true) {
                                 Toast.makeText(SignUp.this, "regrestration sucessfull", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                Intent intent = new Intent(getApplicationContext(), SignupPerMedDet.class);
                                 intent.putExtra("username", user);
                                 startActivity(intent);
                             } else {

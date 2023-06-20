@@ -13,6 +13,7 @@ import com.example.health_app.SheduleAppointment;
 import com.example.health_app.SheduleMedecine;
 import com.example.health_app.model.Appointment;
 import com.example.health_app.model.Medecine;
+import com.example.health_app.model.Record;
 import com.example.health_app.params.params;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class MyDbHelper extends SQLiteOpenHelper {
         db.execSQL("create table users(username TEXT primary key, password TEXT)");
         db.execSQL("create table medicineshedules(username TEXT, pname TEXT, mname TEXT, qty TEXT, date TEXT, nodays TEXT, time TEXT)");
         db.execSQL("create table appointmentshedules(username TEXT, pname TEXT, dhname TEXT, des TEXT, date TEXT)");
+        db.execSQL("create table patdata(username TEXT, pname TEXT, bloodgroup TEXT, healthcondition TEXT, ht TEXT, wt TEXT)");
 
     }
 
@@ -132,6 +134,36 @@ public class MyDbHelper extends SQLiteOpenHelper {
     }
 
 
+
+    public boolean insertrecord(String username, String pname, String bloodgroup, String healthcondition, String ht, String wt) {
+        Log.d("dbcheck", "bef init: ");
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        Log.d("dbcheck", "after init ");
+
+        values.put("username", username);
+        values.put("pname", pname);
+        values.put("bloodgroup", bloodgroup);
+        values.put("healthcondition", healthcondition);
+        values.put("ht", ht);
+        values.put("wt", wt);
+        Log.d("dbcheck", "after value push, before intent");
+
+
+        long result = db.insert("patdata", null, values);
+        Log.d("dbcheck", "after push: ");
+
+        if(result == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+
+
+
     //reading
     public List<Medecine> getallmedecine(String username){
         List<Medecine> sheduledmedecinelist = new ArrayList<>();
@@ -187,6 +219,34 @@ public class MyDbHelper extends SQLiteOpenHelper {
             }while(cursor.moveToNext());
         }
         return sheduledmedecinelist;
+    }
+
+
+    public List<Record> getrecords(String username){
+        List<Record> records = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Generate the query to read from the database
+        String select = "SELECT * FROM patdata" ;
+        Cursor cursor = db.rawQuery(select, null);
+
+        //Loop through now
+        if(cursor.moveToFirst()){
+            do{
+                if(username.endsWith(cursor.getString(0))) {
+                    Record sm = new Record();
+                    //        String pname, String bloodgroup, String healthcondition, String ht, String wt, String username
+                    sm.setPname(cursor.getString(1));
+                    sm.setBloodgroup(cursor.getString(2));
+                    sm.setHealthcondition(cursor.getString(3));
+                    sm.setHt(cursor.getString(4));
+                    sm.setWt(cursor.getString(5));
+                    records.add(sm);
+                }
+
+            }while(cursor.moveToNext());
+        }
+        return records;
     }
 
 
