@@ -71,15 +71,17 @@ tools:context=".SignupPerMedDet">
         android:layout_marginBottom="30dp"
         android:paddingLeft="20dp" />
 
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/height"
-        android:hint="height"
+        android:hint="height in ft"
         android:layout_marginLeft="7dp"
         android:layout_marginRight="7dp"
         android:textColor="#E1A500"
         android:textSize="25dp"
+        android:inputType="number"
         android:textColorHint="#E1A500"
         android:background="@drawable/background_btn_2"
         android:layout_marginBottom="30dp"
@@ -89,7 +91,8 @@ tools:context=".SignupPerMedDet">
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/weight"
-        android:hint="weight"
+        android:hint="weight in kg"
+        android:inputType="number"
         android:layout_marginLeft="7dp"
         android:layout_marginRight="7dp"
         android:textColor="#E1A500"
